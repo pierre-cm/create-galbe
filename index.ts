@@ -7,7 +7,7 @@ import { readdir } from "fs/promises"
 
 Bun.env.FORCE_COLOR = "1"
 
-const dir = import.meta.dir
+const dir = __dirname
 const DEFAULT_NAME = "galbe-app"
 
 program
@@ -22,10 +22,6 @@ program
       path === "."
         ? DEFAULT_NAME
         : path.match(/\/?([^/]+)$/)?.[1] || DEFAULT_NAME
-    console.log(path, template)
-    await $`echo "Hello from Galbe!"`
-    console.log(name)
-
     const templates = await readdir(`${dir}/templates`)
     if (!templates.includes(template)) {
       console.error(`Unknown template '${template}'.`)
@@ -33,7 +29,7 @@ program
     }
 
     await $`cp -r ${dir}/templates/${template}/. ${path}`
-    await $`find . -type f -exec sed -i 's/%PROJECT_NAME%/${name}/g' {} +`
+    await $`find ${path} -type f -exec sed -i 's/galbe-app/${name}/g' {} +`
   })
 
 program.parse()

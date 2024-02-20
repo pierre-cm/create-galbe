@@ -1,6 +1,6 @@
 {
   "name": "create-galbe",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "type": "module",
   "bin": "./bin",
   "files": [
