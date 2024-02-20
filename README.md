@@ -1,15 +1,27 @@
 # create-galbe
 
-To install dependencies:
+Create and setup new [Galbe](https://galbe.dev) application.
+
+## Usage
+
+To setup a new Galbe application with default configuration, simply run:
 
 ```bash
-bun install
+bun create galbe
 ```
 
-To run:
+This will create a new Galbe project under `galbe-app` folder in the current directory.
 
-```bash
-bun run index.ts
+To define a custom project name, you can run:
+
+```bash$
+bun create galbe my-project-name
 ```
 
-This project was created using `bun init` in bun v1.0.27. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+This will setup a project with the default configuration.
+
+Alternatively, you can use a different template to scaffold your project. To do that, you need to specify the `--template` option with the name of the template you want to use. Available templates are visible under the `templates` directory of this project.
+
+```bash$
+bun create galbe my-project-name --template hello
+```

@@ -1,13 +1,13 @@
 {
   "name": "create-galbe",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "type": "module",
   "bin": "./bin",
   "files": [
     "bin"
   ],
   "author": {
-    "name": "Pierre Caillaud m",
+    "name": "Pierre Caillaud M",
     "url": "https://github.com/pierre-cm"
   },
   "repository": {

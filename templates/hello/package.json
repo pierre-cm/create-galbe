@@ -1,0 +1,19 @@
+{
+  "name": "%PROJECT_NAME%",
+  "module": "index.ts",
+  "scripts":{
+    "dev": "galbe dev index.ts",
+    "build": "galbe build index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "trustedDependencies": ["galbe"],
+  "type": "module",
+  "dependencies": {
+    "galbe": "latest"
+  }
+}
