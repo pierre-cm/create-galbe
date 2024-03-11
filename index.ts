@@ -29,7 +29,7 @@ program
     }
 
     await $`cp -r ${dir}/templates/${template}/. ${path}`
-    await $`find ${path} -type f -exec sed -i 's/galbe-app/${name}/g' {} +`
+    await $`find ${path} -type f -exec sed -i 's/%PROJECT_NAME%/${name}/g' {} +`
   })
 
 program.parse()

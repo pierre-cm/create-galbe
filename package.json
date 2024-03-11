@@ -1,10 +1,11 @@
 {
   "name": "create-galbe",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "type": "module",
   "bin": "./bin",
   "files": [
-    "bin"
+    "bin",
+    "templates"
   ],
   "author": {
     "name": "Pierre Caillaud M",
