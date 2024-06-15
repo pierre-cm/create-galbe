@@ -1,7 +1,8 @@
 import type { GalbeConfig } from "galbe"
 
 const config: GalbeConfig = {
-  routes: "routes/*.route.ts",
+  port: 3000,
+  routes: "**/*.route.ts",
 }
 
 export default config

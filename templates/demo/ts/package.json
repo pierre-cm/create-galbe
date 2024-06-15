@@ -1,0 +1,26 @@
+{
+  "name": "%PROJECT_NAME%",
+  "description": "Demo Galbe app. Manage users and tasks",
+  "version": "0.1.0",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "^1.0.12",
+    "@types/js-yaml": "^4.0.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "galbe dev index.ts --watch",
+    "build": "galbe build index.ts",
+    "client": "galbe generate client index.ts",
+    "cli": "galbe generate client index.ts --target cli",
+    "spec": "galbe generate spec index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "galbe": "latest",
+    "galbe-jwt": "^1.0.0",
+    "galbe-swagger": "^1.0.2"
+  }
+}

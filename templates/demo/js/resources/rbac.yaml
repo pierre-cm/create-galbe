@@ -1,0 +1,29 @@
+roles:
+  admin:
+    description: admin role
+    permissions: ["*:*"]
+  reader:
+    description: reader role
+    permissions: ["*:read"]
+  writer:
+    description: writer role
+    permissions: ["*:write"]
+permissions:
+  "users:read":
+    description: read users
+    extends: ["users:list"]
+  "users:write":
+    description: write users
+    extends: []
+  "users:list":
+    description: list users
+    extends: []
+  "tasks:read":
+    description: read tasks
+    extends: ["tasks:list"]
+  "tasks:write":
+    description: write tasks
+    extends: []
+  "tasks:list":
+    description: list tasks
+    extends: []

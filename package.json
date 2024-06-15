@@ -1,6 +1,6 @@
 {
   "name": "create-galbe",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "type": "module",
   "bin": "./bin",
   "files": [
@@ -21,8 +21,10 @@
     "build": "bun build ./index.ts --compile --outfile bin"
   },
   "devDependencies": {
+    "@swc/core": "^1.5.29-nightly-20240612.2",
     "@types/bun": "latest",
-    "typescript": "^5.0.0",
-    "commander": "^12.0.0"
+    "@types/prompts": "^2.4.9",
+    "commander": "^12.0.0",
+    "typescript": "^5.0.0"
   }
 }

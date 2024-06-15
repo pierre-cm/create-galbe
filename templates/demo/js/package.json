@@ -1,0 +1,19 @@
+{
+  "name": "%PROJECT_NAME%",
+  "description": "Demo Galbe app. Manage users and tasks",
+  "version": "0.1.0",
+  "module": "index.js",
+  "scripts": {
+    "dev": "galbe dev index.js --watch",
+    "build": "galbe build index.js",
+    "client": "galbe generate client index.js",
+    "cli": "galbe generate client index.js --target cli",
+    "spec": "galbe generate spec index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "galbe": "latest",
+    "galbe-jwt": "^1.0.0",
+    "galbe-swagger": "^1.0.2"
+  }
+}

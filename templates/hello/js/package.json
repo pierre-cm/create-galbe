@@ -1,0 +1,12 @@
+{
+  "name": "%PROJECT_NAME%",
+  "module": "index.js",
+  "scripts": {
+    "dev": "galbe dev index.js",
+    "build": "galbe build index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "galbe": "latest"
+  }
+}

@@ -20,6 +20,16 @@ Run the dev server:
 bun dev
 ```
 
+## Usage
+
+```bash
+curl http://localhost:3000/hello
+```
+
+```bash
+curl http://localhost:3000/hello?name=Pierre
+```
+
 ## Build
 
 To bundle your Galbe app, simply run:

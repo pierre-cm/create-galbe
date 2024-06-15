@@ -1,0 +1,12 @@
+{
+  "name": "%PROJECT_NAME%",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "galbe": "latest",
+    "typescript": "^5.0.0"
+  }
+}

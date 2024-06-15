@@ -1,0 +1,8 @@
+{
+  "name": "%PROJECT_NAME%",
+  "module": "index.js",
+  "type": "module",
+  "peerDependencies": {
+    "galbe": "latest"
+  }
+}

@@ -1,4 +1,4 @@
 import { Galbe } from "galbe"
-import config from "./galbe.config.ts"
+import config from "./config"
 
 export default new Galbe(config)
