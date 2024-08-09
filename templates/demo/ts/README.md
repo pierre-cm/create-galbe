@@ -79,7 +79,7 @@ bun run spec
 
 This will generate an OpenAPI 3.0 spec in `spec/api.yaml` by default.
 
-See [documentation](https://galbe.dev/documentation) for more info and examples.
+See [documentation](https://galbe.dev/documentation/cli/spec) for more info and examples.
 
 ### Client
 
@@ -87,9 +87,9 @@ See [documentation](https://galbe.dev/documentation) for more info and examples.
 bun run client
 ```
 
-This will generate a client typescript module bin in `dist/client.ts` by default.
+This will generate a client typescript module bin in `dist/client.js` by default.
 
-See [documentation](https://galbe.dev/documentation) for more info and examples.
+See [documentation](https://galbe.dev/documentation/cli/js-or-ts-client) for more info and examples.
 
 ### Command Line Interface (CLI)
 
@@ -99,4 +99,4 @@ bun run cli
 
 This will generate a CLI bin in `dist/cli` by default.
 
-See [documentation](https://galbe.dev/documentation) for more info and examples.
+See [documentation](https://galbe.dev/documentation/cli/cli-client) for more info and examples.

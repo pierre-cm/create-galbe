@@ -105,9 +105,17 @@ program
       process.exit(1)
     }
 
-    await cp(`${__dirname}/templates/${template}/${lang}`, path, {
+    let templateDir = `${__dirname}/templates/${template}`
+
+    await cp(`${templateDir}/${lang}`, path, {
       recursive: true,
     })
+
+    if (existsSync(`${__dirname}/scripts/${template}.ts`))
+      await (
+        await import(`${__dirname}/scripts/${template}.ts`)
+      )?.default(templateDir, path, lang)
+
     await $`find ${path} -type f -exec sed -i 's/%PROJECT_NAME%/${name}/g' {} +`
   })
 
