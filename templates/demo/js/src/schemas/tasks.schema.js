@@ -6,9 +6,9 @@ export const TaskSchema = $T.object(
   {
     id: TaskID,
     author: $T.integer(),
-    assignee: $T.optional($T.integer()),
+    assignee: $T.nullable($T.integer()),
     title: $T.string(),
-    description: $T.optional($T.string()),
+    description: $T.string(),
     created: $T.integer(),
   },
   { id: "Task" }
@@ -16,9 +16,9 @@ export const TaskSchema = $T.object(
 export const CreateTaskSchema = {
   body: $T.object(
     {
-      assignee: $T.optional($T.integer()),
+      assignee: $T.nullish($T.integer()),
       title: $T.string(),
-      description: $T.optional($T.string()),
+      description: $T.nullish($T.string()),
     },
     { id: "CreateTask" }
   ),
@@ -37,7 +37,7 @@ export const UpdateTaskSchema = {
   },
   body: $T.object(
     {
-      assignee: $T.optional($T.integer()),
+      assignee: $T.nullish($T.integer()),
       title: $T.optional($T.string()),
       description: $T.optional($T.string()),
     },
