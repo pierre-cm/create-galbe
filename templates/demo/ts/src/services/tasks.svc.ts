@@ -4,8 +4,8 @@ import db from "../database/db"
 import { getUser } from "./user.svc"
 import { filterUndef } from "../utils/utils"
 
-const checkAssignee = (id?: number) => {
-  if (id !== undefined) {
+const checkAssignee = (id?: number | null) => {
+  if (id !== undefined && id !== null) {
     try {
       getUser(id)
     } catch (err) {
@@ -73,8 +73,8 @@ export const createTask = async (task: CreateTask, author: number) => {
   stmt.run({
     $title: task.title,
     $author: author,
+    $description: task.description || "",
     $assignee: task.assignee || null,
-    $description: task.description || null,
   })
 }
 
@@ -87,7 +87,7 @@ export const updateTask = async (id: number, task: UpdateTask) => {
   stmt.run({
     $id: currentTask.id,
     $title: currentTask.title,
-    $description: currentTask.description || null,
+    $description: currentTask.description || "",
     $assignee: currentTask.assignee || null,
   })
 }

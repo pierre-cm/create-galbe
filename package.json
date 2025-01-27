@@ -1,10 +1,12 @@
 {
   "name": "create-galbe",
-  "version": "0.5.0",
+  "version": "0.5.4",
   "type": "module",
-  "bin": "./bin",
+  "bin": {
+    "create-galbe": "index.js"
+  },
   "files": [
-    "bin",
+    "index.js",
     "templates"
   ],
   "author": {
@@ -18,7 +20,8 @@
   "license": "MIT",
   "homepage": "https://galbe.dev",
   "scripts": {
-    "build": "bun build ./index.ts --compile --outfile bin"
+    "build": "bun build ./index.ts --outfile index.js --target bun",
+    "publish": "bun run build && npm publish"
   },
   "devDependencies": {
     "@swc/core": "^1.5.29-nightly-20240612.2",

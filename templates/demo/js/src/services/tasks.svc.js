@@ -66,8 +66,8 @@ export const createTask = async (task, author) => {
   stmt.run({
     $title: task.title,
     $author: author,
+    $description: task.description || "",
     $assignee: task.assignee || null,
-    $description: task.description || null,
   })
 }
 
@@ -80,7 +80,7 @@ export const updateTask = async (id, task) => {
   stmt.run({
     $id: currentTask.id,
     $title: currentTask.title,
-    $description: currentTask.description || null,
+    $description: currentTask.description || "",
     $assignee: currentTask.assignee || null,
   })
 }
